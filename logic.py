@@ -16,3 +16,8 @@ def send_welcome(message):
     bot.reply_to(message, """\
                 Команды бота: "", ""\
 """)
+    
+def info_project(message):
+    info = manager.get_question_answer()
+    if not info:
+        info = 'Обрабатываем ваш запрос'
